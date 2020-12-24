@@ -20,3 +20,48 @@ body {
   justify-content: center;
   overflow: hidden;
 }
+
+#root {
+  display: flex;
+  height: 70vh;
+  width: 90vw;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  flex: 0.5;
+  margin: 0 3rem;
+  border-radius: 50px;
+  will-change: flex;
+  transition: flex 300ms ease-out;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-size: cover;
+}
+
+.title {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  opacity: 0;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.active {
+  flex: 5;
+}
+
+.active .title {
+  opacity: 1;
+}
