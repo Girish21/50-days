@@ -8,9 +8,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <title></title>
+    <title>Form Input Wave</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Please Loginin</h1>
+      <form action="#">
+        <div class="form-control">
+          <input id="email" type="text" required autocomplete="new-password" />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="form-control">
+          <input id="password" type="password" required />
+          <label for="password">Passowrd</label>
+        </div>
+
+        <button class="btn">Login</button>
+
+        <p class="text">Don't have an account? <a href="#">Register</a></p>
+      </form>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
