@@ -11,12 +11,42 @@ body {
 }
 
 body {
-  height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  background-color: #efedd6;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.content {
+  background-color: steelblue;
+  color: white;
+  display: grid;
+  place-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 300ms ease;
+}
+
+.content h2 {
+  font-size: 3rem;
+}
+
+.content:nth-last-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.content.show {
+  transform: translateX(0);
 }
