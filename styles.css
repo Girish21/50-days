@@ -1,22 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
   height: 100vh;
-  margin: 0;
-  padding: 0;
+}
+
+.slide-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 300ms ease;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  color: white;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 300ms ease;
+}
+
+.right-slide > div {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.slide-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+  border: 0;
+  background-color: white;
+  padding: 15px;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.slide-container .action-buttons button:hover {
+  color: #222;
+}
+
+.slide-container .action-buttons button:active,
+.slide-container .action-buttons button:focus {
+  outline: 0;
+}
+
+.slide-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-radius: 0 0 5px 5px;
+}
+
+.slide-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-radius: 5px 5px 0 0;
 }
